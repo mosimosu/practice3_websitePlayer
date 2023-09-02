@@ -1,0 +1,149 @@
+﻿#controlPanel {
+    margin: auto;
+    border: solid;
+    border-radius: 10px;
+    padding: 20px;
+    width: 41rem;
+    height: fit-content;
+    background-color: #808080;
+}
+
+#btnArea > span {
+    font-family: Webdings;
+    cursor: pointer;
+    font-size: 2.5rem;
+    border: solid;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+}
+
+#playInfo {
+    width: inherit;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #808080;
+    
+}
+
+#music {
+    width: inherit;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.btnVol {
+    border-radius: 50px;
+    border: hidden;
+}
+
+#setVolValue {
+    width: 35.2rem;
+    height: 10px;
+    border: 3px solid;
+    appearance: none;
+}
+
+    #setVolValue::-webkit-slider-thumb {
+        appearance: none;
+        background-color: #272727;
+        border-radius: 5px;
+        width: 35px;
+        height: 25px;
+    }
+
+    #setVolValue:-moz-range-thumb {
+        border: 3px solid #272727;
+        background-color: #272727;
+        width: 30px;
+        height: 20px;
+    }
+
+#volValue {
+    width: 25px;
+    text-align: center;
+    background-color: black;
+    color: yellow;
+}
+
+#progress {
+    width: inherit;
+    height: 5px;
+    appearance: none;
+    margin-bottom: 10px;
+    background-color: azure;
+}
+
+    #progress::-webkit-slider-thumb {
+        appearance: none;
+        background-color: #808080;
+        width: 5px;
+        height: 5px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+        #progress::-webkit-slider-thumb:hover {
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            background-color: white;
+        }
+
+    #progress:-moz-range-thumb {
+        appearance: none;
+        background-color: #808080;
+        width: 5px;
+        height: 5px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+        #progress:-moz-range-thumb:hover {
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+        }
+
+
+#book {
+}
+
+    #book > div {
+        border: 2px solid;
+        width: 18.9rem;
+        height: 200px;
+        float: left;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+        #book > div > div {
+            border: 2px solid;
+            padding-left:1em;
+            padding-top:0.2em;
+            padding-bottom:0.1em;
+            border-radius: 10px;
+            margin-block:5px;
+            height:25px;
+        }
+
+    #book > button {
+        clear: both;
+        border: 2px solid;
+        border-radius: 50px;
+        width: 368px;
+        height: 40px;
+        font-size: 1.2rem;
+        background: #808080;
+        margin: 0.2rem 9.2rem;
+    }
+
+.hide {
+    display: none;
+}
+

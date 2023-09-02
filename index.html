@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Music Player</title>
+
+    <link href="playerStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <audio controls="controls" id="myAudio" hidden>
+        <source type="audio/mpeg" />
+    </audio>
+
+    <hr />
+    <div id="controlPanel">
+        <div id="btnArea">
+            <span onclick="changeMusic(-1)">9</span>
+            <span onclick="changeTimeTracks(-5)">7</span>
+            <span onclick="playAudio()">4</span>
+            <span onclick="stopAudio()"><</span>
+            <span onclick="changeTimeTracks(+5)">8</span>
+            <span onclick="changeMusic(1)">:</span>
+            <span onclick="setMuted()">V</span>
+            <span onclick="setLoop()">`</span>
+            <span onclick="setRandom()">s</span>
+            <span onclick="setAllRandom()">q</span>
+            <span onclick="showBook()">@</span>
+        </div>
+        <br />
+        <input id="progress" type="range" value="0" oninput="setProgressBar()" />
+        <input id="setVolValue" type="range" oninput="setVolume()" value="40" />
+        <button class="btnVol" onclick="btnSetVolume(-1)">-</button>
+        <button class="btnVol" onclick="btnSetVolume(1)">+</button>
+        <input id="volValue" type="text" readonly />
+        <hr />
+        <div id="playInfo">
+            <marquee>請按播放鍵</marquee>
+            <div>00:00 / 00:00</div>
+            <div>一般播放</div>
+        </div>
+        <hr />
+        <select id="music" onchange="changeMusic(0)">
+        </select>
+        <hr />
+        <br />
+        <br />
+        <div id="book" class="hide">
+            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div title="Music/01.hananouta.mp3">花の唄</div>
+                <div title="Music/02.IBegYou.mp3">I beg you</div>
+                <div title="Music/03.haruhayuku.mp3">春はゆく</div>
+                <div title="Music/04.hananouta_end_of_spring_ver..mp3">花の唄 end of spring ver.</div>
+                <div title="Music/05.haruhayuku_the_late_spring_ver..mp3">春はゆくthe late spring ver.</div>
+            </div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+            <button onclick="updateMusic()">更新播放清單</button>
+            <button onclick="addAll()">新增全部</button>
+        </div>
+    </div>
+
+    <script src="playerJS.js"></script>
+
+</body>
+</html>
